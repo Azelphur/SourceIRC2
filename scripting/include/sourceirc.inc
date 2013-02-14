@@ -15,13 +15,18 @@
     along with SourceIRC.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define IRC_VERSION "0.9.0"
+#if defined _sourceirc_included
+    #endinput
+#endif
+#define _sourceirc_included
+
+#define IRC_VERSION "2.0"
 
 #define IRC_CMD_MAXLEN 64 // The maximum length of a command
 #define IRC_NICK_MAXLEN 64 // The maximum length of a nickname
 #define IRC_USER_MAXLEN 64 // The maximum length of a username
 #define IRC_HOST_MAXLEN 256 // The maximum length of a host
-#define IRC_CHANNEL_MAXLEN 64 // The maximum length of a channel  name
+#define IRC_CHANNEL_MAXLEN 64 // The maximum length of a channel name
 #define IRC_MAX_MODES 64 // The maximum amount of modes
 #define IRC_MAXLEN 512 // The maximum length of a line from the server. IRC RFC says maximum line length is 512, there again it also says a nicknames max length is 9. This might not be right.
 

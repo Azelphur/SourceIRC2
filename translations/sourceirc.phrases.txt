@@ -1,14 +1,13 @@
 "Phrases"
 {
-	// Core
-	"Hi"
-	{
-		"#format"		"{1:s}"
-		"en"			"Hi, i'm {1}. Try typing \"{1} help\" for information on how to use me."
-	}
 	"Unknown Command"
 	{
 		"#format"		"{1:s}"
 		"en"			"Unknown command: \"{1}\""
+	}
+	"Access Denied"
+	{
+		"#format"		"{1:s}"
+		"en"			"Access Denied: \"{1}\""
 	}
 }

@@ -29,6 +29,7 @@ new String:g_szPassword[IRC_MAXLEN];
 new String:g_szNick[IRC_NICK_MAXLEN];
 new String:g_szUser[IRC_NICK_MAXLEN];
 new String:g_szRealName[IRC_MAXLEN];
+new String:g_szCmdPrefix[32];
 new bool:g_bDebug = false;
 
 // Keep track of what config section we are in for SMC
@@ -39,10 +40,10 @@ new Handle:g_hEvents;
 
 enum ircEvent
 {
-	Handle:eventPlugin,
-	Handle:eventCallback,
-	Handle:eventForward,
-	String:eventName[IRC_CMD_MAXLEN],
+    Handle:eventPlugin,
+    Handle:eventCallback,
+    Handle:eventForward,
+    String:eventName[IRC_CMD_MAXLEN],
 };
 
 // Command registery for plugins using IRC_RegCmd or IRC_RegAdminCmd
@@ -50,14 +51,14 @@ new Handle:g_hCmds;
 
 enum ircCmd
 {
-	Handle:cmdPlugin,
-	Handle:cmdCallback,
-	Handle:cmdForward,
-	String:cmdName[IRC_CMD_MAXLEN],
-	String:cmdDescription[256],
-	cmdPermissions,
-	cmdFlag,
-	cmdGroup[IRC_CMD_MAXLEN]
+    Handle:cmdPlugin,
+    Handle:cmdCallback,
+    Handle:cmdForward,
+    String:cmdName[IRC_CMD_MAXLEN],
+    String:cmdDescription[256],
+    cmdPermissions,
+    cmdFlag,
+    cmdGroup[IRC_CMD_MAXLEN]
 };
 
 // Storage for user information
